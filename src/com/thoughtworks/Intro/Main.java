@@ -65,22 +65,18 @@ public class Main {
     }
 
     public static void drawHorizontalLine() {
-        int x = 0;
         int lineLength = Integer.parseInt(readInput("How many characters long? "));
-        while (x < lineLength) {
+        for (int i = 0; i < lineLength; i++) {
             printCharacter();
-            x++;
         }
         System.out.println();
     }
 
     public static void drawVerticalLine() {
-        int x = 0;
         int lineLength = Integer.parseInt(readInput("How many characters wide? "));
-        while (x < lineLength) {
+        for (int i = 0; i < lineLength; i++) {
             printCharacter();
             System.out.println();
-            x++;
         }
         System.out.println();
     }
