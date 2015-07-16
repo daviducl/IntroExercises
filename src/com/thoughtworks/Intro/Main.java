@@ -179,6 +179,12 @@ public class Main {
     }
 
     public static void generate(int n) {
+        if (n == 1) {
+            System.out.println("List is empty.");
+            return;
+        } else if (n < 1) {
+            System.out.println("Number must be positive and non-zero");
+        }
         List<Integer> primeNums = new ArrayList<>();
         for (int x = 2; x <= n; x++) {
             while (n % x == 0) {
