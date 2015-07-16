@@ -23,7 +23,8 @@ public class Main {
 
             switch (readInput("Exercise number: ")) {
                 case "1":
-                    printAsterisk();
+                    printCharacter();
+                    System.out.println();
                     break;
                 case "2":
                     drawHorizontalLine();
@@ -53,20 +54,21 @@ public class Main {
                     isAlive = false;
                     break;
                 default:
-                    System.out.println("Invalid input. Try again.");
+                    System.err.println("Invalid input. Try again.");
             }
         }
     }
 
-    public static void printAsterisk() {
-        System.out.println("*");
+    public static void printCharacter() {
+        String theChar = "*";
+        System.out.print(theChar);
     }
 
     public static void drawHorizontalLine() {
         int x = 0;
         int lineLength = Integer.parseInt(readInput("How many characters long? "));
         while (x < lineLength) {
-            System.out.print("*");
+            printCharacter();
             x++;
         }
         System.out.println();
@@ -76,7 +78,8 @@ public class Main {
         int x = 0;
         int lineLength = Integer.parseInt(readInput("How many characters wide? "));
         while (x < lineLength) {
-            System.out.println("*");
+            printCharacter();
+            System.out.println();
             x++;
         }
         System.out.println();
@@ -86,7 +89,7 @@ public class Main {
         int lineLength = Integer.parseInt(readInput("Triangle is how tall? "));
         for (int i = 0; i < lineLength; i++) {
             for (int j = 0; j <= i; j++) {
-                System.out.print("*");
+                printCharacter();
             }
             System.out.println();
         }
@@ -100,7 +103,7 @@ public class Main {
             }
             int lineWidth = (int) (((i + 1) * 2) - .5);
             for (int k = 0; k < lineWidth; k++) {
-                System.out.print("*");
+                printCharacter();
             }
             System.out.println();
         }
@@ -115,7 +118,7 @@ public class Main {
             }
             int lineWidth = (int) (((i + 1) * 2) - .5);
             for (int k = 0; k < lineWidth; k++) {
-                System.out.print("*");
+                printCharacter();
             }
             System.out.println();
         }
@@ -125,7 +128,7 @@ public class Main {
             }
             int lineWidth = (int) ((i * 2) - .5);
             for (int k = lineWidth; k > 0; k--) {
-                System.out.print("*");
+                printCharacter();
             }
             System.out.println();
         }
@@ -141,7 +144,7 @@ public class Main {
             }
             int lineWidth = (int) (((i + 1) * 2) - .5);
             for (int k = 0; k < lineWidth; k++) {
-                System.out.print("*");
+                printCharacter();
             }
             System.out.println();
         }
@@ -152,7 +155,7 @@ public class Main {
             }
             int lineWidth = (int) ((i * 2) - .5);
             for (int k = lineWidth; k > 0; k--) {
-                System.out.print("*");
+                printCharacter();
             }
             System.out.println();
         }
